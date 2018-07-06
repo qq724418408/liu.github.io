@@ -1,0 +1,1164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>吴俊流</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="吴俊流, 简历, 大学, Android, UI, Java, JavaWEB" />
+<!-- webfonts -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href='//fonts.googleapis.com/css?family=Asap:400,700,400italic' rel='stylesheet' type='text/css'/>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'/>
+<link href="ico/liu.ico" rel="shortcut icon"/> 
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css'/>
+<!-- webfonts -->
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1000);
+		});
+	});
+	/* music */
+	function play_music(){
+        if ($('#mc_play').hasClass('on')){
+            $('#mc_play audio').get(0).pause();
+            $('#mc_play').attr('class','stop');
+        }else{
+            $('#mc_play audio').get(0).play();
+            $('#mc_play').attr('class','on');
+        }
+        $('#music_play_filter').hide();
+        event.stopPropagation(); //阻止冒泡 
+    }
+    function just_play(id){
+        $('#mc_play audio').get(0).play();
+        $('#mc_play').attr('class','on');
+        if (typeof(id)!='undefined'){
+            $('#music_play_filter').hide();
+        }
+        event.stopPropagation(); //阻止冒泡 
+    } 
+    function is_weixn(){
+        return false;
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var play_filter=document.getElementById('music_play_filter');
+    play_filter.addEventListener('click', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('touchstart', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('touchend', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('touchmove', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('mousedown', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('mouseup', function(){
+        just_play(1);
+    });
+    play_filter.addEventListener('mousemove',function(){
+        just_play(1);
+    });
+    window.onload=function(){
+        if (!is_weixn()){
+            just_play();
+        }
+    } 
+</script>
+<style type="text/css">
+	/* music */
+    @-webkit-keyframes reverseRotataZ{
+        0%{-webkit-transform: rotateZ(0deg);}
+        100%{-webkit-transform: rotateZ(-360deg);}
+    }
+    @-webkit-keyframes rotataZ{
+        0%{-webkit-transform: rotateZ(0deg);}
+        100%{-webkit-transform: rotateZ(360deg);}
+    }
+    #musicControl { position:fixed;right:10px;top:20px;margin-top:0;display:inline-block;z-index:99999999}
+    #musicControl a { display:inline-block;width:25px;height:25px;overflow:hidden;background:url('images/mcbg.png') no-repeat;background-size:100%;}
+    #musicControl a audio{width:100%;height:56px;}
+    #musicControl a.stop { background-position:left bottom;}
+    #musicControl a.on { background-position:0px 1px;-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+    #music_play_filter{width:100%;height:100%;overflow:hidden;position:fixed;top:0;left:0;z-index:99999998;}
+</style>
+<!---- start-smoth-scrolling---->
+</head>
+<body>
+	<!-- container -->
+	<!-- header -->
+	<div id="home" class="header">
+		<div class="container">
+			<!-- top-hedader -->
+			<div class="top-header">
+				<!-- /logo -->
+				<!--top-nav---->
+				<div class="top-nav">
+					<div class="navigation">
+						<div class="logo">
+							<h1>
+								<a href="index.html"><span>自</span>我介绍</a>
+							</h1>
+						</div>
+						<div class="navigation-right">
+							<span class="menu"><img src="images/menu.png" alt=" " /></span>
+							<nav class="link-effect-3" id="link-effect-3">
+								<ul class="nav1 nav nav-wil">
+									<li class="active">
+										<a data-hover="首页" href="index.html">首页</a>
+									</li>
+									<li>
+										<a class="scroll" data-hover="关于" href="#about">关于</a>
+									</li>
+									<li>
+										<a class="scroll" data-hover="技能" href="#services">技能</a>
+									</li>
+									<li>
+										<a class="scroll" data-hover="经历" href="#work">经历</a>
+									</li>
+									<li>
+										<a class="scroll" data-hover="作品" href="#port">作品</a>
+									</li>
+									<li>
+										<a class="scroll" data-hover="奖状" href="#blogs">奖状</a>
+									</li>
+									<li>
+										<a class="scroll" data-hover="联系我" href="#contact">联系我</a>
+									</li>
+								</ul>
+							</nav>
+							<!-- script-for-menu -->
+							<script>
+								$("span.menu").click(function() {
+									$("ul.nav1").slideToggle(300, function() {
+										// Animation complete.
+									});
+								});
+							</script>
+							<!-- /script-for-menu -->
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- /top-hedader -->
+				</div>
+				<div class="banner-info">
+					<div class="col-md-7 header-right">
+						<h1>Hi !</h1>
+						<h6>Android & JavaWEB Developer</h6>
+						<ul class="address">
+							<li>
+								<ul class="address-text">
+									<li><b>姓名</b></li>
+									<li>吴俊流</li>
+								</ul></li>
+							<li>
+								<ul class="address-text">
+									<li><b>生日</b></li>
+									<li>1992-05-16</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="address-text">
+									<li><b>手机 </b></li>
+									<li>+86 187 7899 0423</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="address-text">
+									<li><b>地址 </b></li>
+									<li>广西 南宁市 邕宁区 龙亭路8号</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="address-text">
+									<li><b>邮箱 </b></li>
+									<li>
+										<a href="mailto:wujun@liuqq.cc">wujun@liuqq.cc</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="address-text">
+									<li><b>网站 </b></li>
+									<li>
+										<a href="http://www.liuqq.cc">www.liuqq.cc</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-5 header-left">
+						<img src="images/img1.jpg" alt="">
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- about -->
+	<div id="about" class="about">
+		<div class="col-md-6 about-left">
+			<div id="owl-demo1" class="owl-carousel owl-carousel2">
+				<div class="item">
+					<div class="about-left-grid">
+						<h2>
+							Hi! I'm <span>吴俊流</span>
+						</h2>
+						<p>
+						在校期间，我时刻注意自身的全面提高，建立合理的知识结构。
+						我认真学习，勤奋刻苦，并加入了中国共产党，现在是一名预备党员。
+						作为班级学习委员，我努力做好本职工作，工作中不断尝试创新的管理办法，
+						利用所学知识完成工作中遇到的各种问题。积累了大量的工作经验，
+						使自己具有良好的身体素质和心理素质。几年来我努力学习专业知识，
+						从各门课程的基础知识出发，努力掌握其基本技能技巧，深钻细研，
+						寻求其内在规律，并取得了良好的成绩。计算机编程、软件设计方面有较好的理论基础。
+						</p>
+						<ul>
+							<li>
+								<a class="a-btn-a scroll" href="#port">我的作品</a>
+							</li>
+							<li>
+								<a class="a-btn-h scroll" href="#contact">马上联系我</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="item">
+					<div class="about-left-grid">
+						<h2>
+							Hi! I'm <span>Ivan</span>
+						</h2>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+						aute irure dolor in reprehenderit in voluptate velit esse cillum
+						dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						cupidatat non proident, sunt in culpa qui officia deserunt mollit
+						anim id est laborum. Sed ut perspiciatis.
+						</p>
+						<ul>
+							<li><a class="a-btn-a scroll" href="#port">我的作品</a>
+							</li>
+							<li><a class="a-btn-h scroll" href="#contact">马上联系我</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="item">
+					<div class="about-left-grid">
+						<h2>
+							<span>自我评价</span>
+						</h2>
+						<p>
+						在校期间，本人为了提升自己的能力，让自己为以后要面对的社会做好充分的准备，
+						对于各项活动都会积极主动的参与，并且在寒暑期的节假日主动参与各方面的实习工作，
+						这给我以后的人生带来了极大的帮助。
+						在为人处事方面，我与同学老师都能和睦相处，人与人之间团结友爱，有人遇到困难我
+						便会主动的去帮助，当我有困难的时候大家也都会向我伸出援助之手，真的 很感激大家。
+						在学习方面，我都会按时完成老师所布置的作业，在空余的时间还会去学习一下其他方
+						面的知识，学习态度端正认真。
+						总之，大学四年的生活既充实又丰富多彩，期间我学到了很多的知识，交到了很好的朋友，
+						这对我来说都是很有意义的，对以后的我来说也是很有帮助的。
+						</p>
+						<ul>
+							<li><a class="a-btn-a scroll" href="#port">我的作品</a>
+							</li>
+							<li><a class="a-btn-h scroll" href="#contact">马上联系我</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 about-right"></div>
+		<div class="clearfix"></div>
+		<link href="css/owl.carousel.css" rel="stylesheet">
+		<script src="js/owl.carousel.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#owl-demo1").owlCarousel({
+					items : 1,
+					lazyLoad : false,
+					autoPlay : true,
+					navigation : false,
+					navigationText : false,
+					pagination : true,
+				});
+			});
+		</script>
+		<!-- Feedback -->
+		<script>
+			$(document).ready(function() {
+				$("#owl-demo3").owlCarousel({
+					items : 1,
+					lazyLoad : false,
+					autoPlay : true,
+					navigation : false,
+					navigationText : true,
+					pagination : true,
+				});
+			});
+		</script>
+	</div>
+	<!-- /about -->
+	<!-- services -->
+	<div id="services" class="services">
+		<div class="container">
+			<div class="service-head one text-center ">
+				<h4>技能</h4>
+				<h3>
+					我的 <span>技能</span>
+				</h3>
+				<span class="border two"></span>
+			</div>
+			<!-- services-grids -->
+			<div class="wthree_about_right_grids w3l-agile">
+				<div class="col-md-6 wthree_about_right_grid">
+					<div class="col-xs-4 wthree_about_right_grid_left">
+						<div class="hvr-rectangle-in">
+							<i class="glyphicon glyphicon-pencil"></i>
+						</div>
+					</div>
+					<div class="col-xs-8 wthree_about_right_grid_right">
+						<h4>Java</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 wthree_about_right_grid">
+					<div class="col-xs-4 wthree_about_right_grid_left">
+						<div class="hvr-rectangle-in">
+							<i class="glyphicon glyphicon-cog"></i>
+						</div>
+					</div>
+					<div class="col-xs-8 wthree_about_right_grid_right">
+						<h4>JavaWeb</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 wthree_about_right_grid">
+					<div class="col-xs-4 wthree_about_right_grid_left">
+						<div class="hvr-rectangle-in">
+							<i class="glyphicon glyphicon-leaf"></i>
+						</div>
+					</div>
+					<div class="col-xs-8 wthree_about_right_grid_right">
+						<h4>Android</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 wthree_about_right_grid">
+					<div class="col-xs-4 wthree_about_right_grid_left">
+						<div class="hvr-rectangle-in">
+							<i class="glyphicon glyphicon-gift"></i>
+						</div>
+					</div>
+					<div class="col-xs-8 wthree_about_right_grid_right">
+						<h4>Photoshop</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<!-- services-grids -->
+		</div>
+	</div>
+	<!-- services -->
+	<!--work-experience-->
+	<div id="work" class="work">
+		<div class="container">
+			<div class="service-head text-center">
+				<h4>经历</h4>
+				<h3>
+					个<span>人经历</span>
+				</h3>
+				<span class="border one"></span>
+			</div>
+			<div class="time-main w3l-agile">
+				<div class="col-md-6 year-info">
+					<ul class="year">
+						<li>2017</li>
+						<li>2013</li>
+						<li>2012</li>
+						<li>2009</li>
+						<li>2006</li>
+						<div class="clearfix"></div>
+					</ul>
+				</div>
+				<ul class="col-md-6 timeline">
+					<li>
+						<div class="timeline-badge info">
+							<i class="glyphicon glyphicon-briefcase"></i>
+						</div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">深圳四方精创资讯股份有限公司</h4>
+							</div>
+							<div class="timeline-body">
+								<p>2017年3月1日就职于深圳四方精创资讯股份有限公司。</p>
+							</div>
+						</div></li>
+
+					<li>
+						<div class="timeline-badge primary">
+							<i class="glyphicon glyphicon-briefcase"></i>
+						</div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">南宁学院</h4>
+							</div>
+							<div class="timeline-body">
+								<p>2013年9月就读于南宁学院。在校期间主要学期课程有：
+								计算机组成与结构、计算机电路基础、计算机网络、Java程序设计、
+								JavaWEB程序设计、Android程序设计、云计算与大数据技术、软件工程导论等。</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="timeline-badge danger">
+							<i class="glyphicon glyphicon-briefcase"></i>
+						</div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">贺州高级中学</h4>
+							</div>
+							<div class="timeline-body">
+								<p>2012年9月就读于贺州高级中学。在校期间，勤学刻苦，认真学习，遵纪守法。</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="timeline-badge success">
+							<i class="glyphicon glyphicon-briefcase"></i>
+						</div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">贺州第二高级中学</h4>
+							</div>
+							<div class="timeline-body">
+								<p>2009年9月就读于贺州第二高级中学。在校期间，严格遵守学校纪律，
+								不迟到、不旷课，自觉性强，早起早睡，有良好的作息习惯，学习成绩优秀！</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="timeline-badge pass">
+							<i class="glyphicon glyphicon-briefcase"></i>
+						</div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">公会初级中学</h4>
+							</div>
+							<div class="timeline-body">
+								<p>2006年9月就读于公会初级中学。在校期间，学习刻苦，成绩优异，
+								按时完成作业，不迟到不旷课，尊敬师长，勤俭节约！</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--//work-experience-->
+	<!-- portfolio -->
+	<div class="portfolio" id="port">
+		<div class="service-head text-center">
+			<h4>作品</h4>
+			<h3>
+				我的<span>项目展示</span>
+			</h3>
+			<span class="border"></span>
+		</div>
+		<div class="portfolio-grids">
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#horizontalTab').easyResponsiveTabs({
+						type : 'default', //Types: default, vertical, accordion           
+						width : 'auto', //auto or any width like 600px
+						fit : true
+					// 100% fit in a container
+					});
+				});
+			</script>
+			<div class="sap_tabs">
+				<div id="horizontalTab"
+					style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab">
+							<span>全部</span>
+						</li>
+						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab">
+							<span>安卓数据采集</span>
+						</li>
+						<li class="resp-tab-item" aria-controls="tab_item-2" role="tab">
+							<span>精准扶贫管理系统</span>
+						</li>
+						<li class="resp-tab-item" aria-controls="tab_item-3" role="tab">
+						<span>运动巴士</span>
+						</li>
+					</ul>
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal1" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic4.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal3" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic5.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal2" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic9.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal4" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic6.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic10.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic11.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic13.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<a href="#portfolioModal8" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic14.jpg" alt="">
+								</a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/pic10.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd  ">
+								<div class="thumb">
+									<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/pic11.jpg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic13.jpg" alt="">
+								</a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal2" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic9.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal4" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic6.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd">
+								<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic10.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd">
+								<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic11.jpg" alt="">
+								</a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic10.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd">
+								<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic11.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+									<img src="images/pic13.jpg" alt="">
+								</a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //portfolio -->
+	<!-- top-grids -->
+	<div class="blog" id="blogs">
+		<div class="container">
+			<div class="service-head text-center">
+				<h4>奖状</h4>
+				<h3>
+					我的<span>获奖证书</span>
+				</h3>
+				<span class="border one"></span>
+			</div>
+			<div class="news-grid w3l-agile">
+				<div class="col-md-6 news-img">
+					<a href="#" data-toggle="modal" data-target="#myModal1"> 
+						<img src="images/b1.jpg" alt=" " class="img-responsive">
+					</a>
+
+				</div>
+				<div class="col-md-6 news-text">
+					<h3>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+							奖学金
+						</a>
+					</h3>
+					<ul class="news">
+						<li>
+							<i class="glyphicon glyphicon-user"></i> 
+							<a href="#">管理员</a>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-comment"></i> 
+							<a href="#">1629 条评论</a>
+						</li>
+						<li>
+						<i class="glyphicon glyphicon-heart"></i> 
+							<a href="#">516 个收藏</a>
+						</li>
+						<li><i class="glyphicon glyphicon-tags"></i> 
+							<a href="#">3 个标签</a>
+						</li>
+					</ul>
+					<p>在大学期间，获得过一次广西壮族自治区人民政府奖学金、一次家奖励志学金、两次国家奖学金。</p>
+					<a href="#" data-toggle="modal" data-target="#myModal1" class="read hvr-shutter-in-horizontal">详细...</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="news-grid">
+				<div class="col-md-6 news-text two">
+					<h3>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						大学生创新创业大赛</a>
+					</h3>
+					<ul class="news">
+						<li>
+							<i class="glyphicon glyphicon-user"></i> 
+							<a href="#">管理员</a>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-comment"></i> 
+							<a href="#">282 条评论</a>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-heart"></i> 
+							<a href="#">257 个收藏</a>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-tags"></i> 
+							<a href="#">3 个标签</a>
+						</li>
+					</ul>
+					<p>2015年9月参加首届中国“互联网+”大学生创新创业大赛广西选拔赛“享车位”项目获得金奖、
+					2015年10月参加首届中国“互联网+”大学生创新创业大赛全国总决赛“停车吧”项目获得铜奖、
+					2016年9月参加第二届中国“互联网+”大学生创新创业大赛“新道杯”广西选拔赛决赛“运动巴士”项目获得银奖。
+					</p>
+					<a href="#" data-toggle="modal" data-target="#myModal2" class="read hvr-shutter-in-horizontal">详细...</a>
+				</div>
+				<div class="col-md-6 news-img two">
+					<a href="#" data-toggle="modal" data-target="#myModal1"> 
+						<img src="images/b2.jpg" alt=" " class="img-responsive">
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="news-grid">
+				<div class="col-md-6 news-img">
+					<a href="#" data-toggle="modal" data-target="#myModal1"> 
+						<img src="images/b3.jpg" alt=" " class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-6 news-text">
+					<h3>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						其他奖项</a>
+					</h3>
+					<ul class="news">
+						<li>
+							<i class="glyphicon glyphicon-user"></i> 
+							<a href="#">管理员</a>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-comment"></i> 
+							<a href="#">256 条评论</a>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-heart"></i> 
+							<a href="#">248 个收藏</a>
+						</li>
+						<li>	
+							<i class="glyphicon glyphicon-tags"></i> 
+							<a href="#">3 个标签</a>
+						</li>
+					</ul>
+					<p>2013年12月参加 “东方正龙杯”第五届广西翻译大赛获得(本科组非专业类)一等奖、
+					2014年5月参加高博软件学院第一届“计算机基础能力竞赛”Photoshop项目比赛获得一等奖、
+					2014年5月参加全国大学生英语竞赛（NECCS）获得C类二等奖。</p>
+					<a href="#" data-toggle="modal" data-target="#myModal3" class="read hvr-shutter-in-horizontal">详细...</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- top-grids -->
+	<!-- /blog-pop-->
+	<div class="modal ab fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog about" role="document">
+			<div class="modal-content about">
+				<div class="modal-header">
+					<button type="button" class="close ab" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body about">
+					<div class="about">
+						<div class="about-inner">
+							<img src="images/b3.jpg" alt="about" />
+							<h4 class="tittle">关于奖学金的一些事~</h4>
+							<p>2013年10月 获得2013年度广西壮族自治区人民政府奖学金。</p>
+							<p>2014年11月 获得“2013-2014”年度国家奖学金，同时获得2014年南宁学院一等校长奖学金。</p>
+							<p>2015年10月 获得“2014-2015”年度国家奖励志学金，同时获得2015年南宁学院二等校长奖学金。</p>
+							<p>2016年11月 获得“2015-2016”年度国家奖学金，同时获得2016年南宁学院一等校长奖学金。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal ab fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog about" role="document">
+			<div class="modal-content about">
+				<div class="modal-header">
+					<button type="button" class="close ab" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body about">
+					<div class="about">
+						<div class="about-inner">
+							<img src="images/b3.jpg" alt="about" />
+							<h4 class="tittle">关于创业大赛的一些事~</h4>
+							<p>2015年9月参加首届中国“互联网+”大学生创新创业大赛广西选拔赛“享车位”项目获得金奖、
+							2015年10月参加首届中国“互联网+”大学生创新创业大赛全国总决赛“停车吧”项目获得铜奖。</p>
+							<p>2016年2月参加全国大学生“互联网+”创新大赛暨第三届“发现杯”全国大学生互联网软件设计大奖赛初赛“运动巴士”项目获得二等奖。</p>
+							<p>2016年4月参加全国大学生“互联网+”创新大赛暨第三届“发现杯”全国大学生互联网软件设计大奖赛全国总决赛“运动巴士”项目获得二等奖。</p>
+							<p>2016年8月参加首届南宁市创新创业大赛“运动巴士”项目获得三等奖。</p>
+							<p>2016年9月参加第二届中国“互联网+”大学生创新创业大赛“新道杯”广西选拔赛决赛“运动巴士”项目获得银奖。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal ab fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog about" role="document">
+			<div class="modal-content about">
+				<div class="modal-header">
+					<button type="button" class="close ab" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body about">
+					<div class="about">
+						<div class="about-inner">
+							<img src="images/b3.jpg" alt="about" />
+							<h4 class="tittle">关于其他奖项的一些事~</h4>
+							<p>2013年12月参加 “东方正龙杯”第五届广西翻译大赛获得(本科组非专业类)一等奖。</p>
+							<p>2014年5月参加高博软件学院第一届“计算机基础能力竞赛”Photoshop项目比赛获得一等奖。。</p>
+							<p>2014年5月参加全国大学生英语竞赛（NECCS）获得C类二等奖。</p>
+							<p>2014年5月参加第六届广西翻译大赛获得(本科组非专业类)三等奖。。</p>
+							<p>2014-年12月参加高博软件学院第一届英语演讲比赛获得二等奖。</p>
+							<p>2015年5月9日参加第三届全国英语口语测评大赛（NSEC）获得大学生本科非英语专业组三等奖。</p>
+							<p>2015年参加南宁学院程序设计大赛暨第七届“蓝桥杯”全国软件和信息技术专业人才大赛选拔赛获得Java软件开发项目二等奖。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //blog-pop-->
+	<!-- /header -->
+	<div class="footer" id="contact">
+		<div class="container">
+			<div class="service-head one text-center">
+				<h4>联系我</h4>
+				<h3>
+					保<span>持联系</span>
+				</h3>
+				<span class="border two"></span>
+			</div>
+			<div class="mail_us">
+				<div class="col-md-6 mail_left">
+					<div class="contact-grid1-left">
+						<div class="contact-grid1-left1">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							<h4>通过Mail</h4>
+							<ul>
+								<li>Mail1: <a href="mailto:wujun@liuqq.cc">wujun@liuqq.cc</a>
+								</li>
+								<li>Mail2: <a href="mailto:jlwu@qgaobo.cn">jlwu@qgaobo.cn</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contact-grid1-left">
+						<div class="contact-grid1-left1">
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+							<h4>通过手机</h4>
+							<ul>
+								<li>手机: +86 187 7899 0423</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contact-grid1-left">
+						<div class="contact-grid1-left1">
+							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+							<h4>地址</h4>
+							<ul>
+								<li>家庭地址: 广西 南宁市 邕宁区 龙亭路8号</li>
+								<li>通讯地址: 广西 南宁市 邕宁区 龙亭路8号</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 mail_right">
+					<form action="#" method="post">
+						<input type="text" name="Name" value="姓名" onfocus="this.value = '';" blur="if (this.value == '') {this.value = 'Name';}" required="">
+						<input type="email" name="Email" value="e-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required=""> 
+						<input type="text" name="Mobile number" value="手机号" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
+						<textarea name="Message..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '想对我说点什么呢...';}" required="">想对我说点什么呢...</textarea>
+						<input type="submit" value="发送">
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="copy_right text-center">
+				<p> &copy; 2016 Preface . All rights reserved | Design by 
+					<a href="http://liuqq.cc/" target="_blank">吴俊流.</a>
+				</p>
+				<ul class="social-icons two">
+					<li><a href="#"></a></li>
+					<li><a href="#" class="fb"></a></li>
+					<li><a href="#" class="in"></a></li>
+					<li><a href="#" class="dott"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- /container -->
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic9.jpg" class="img-responsive img-centered"
+								alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic5.jpg" class="img-responsive img-centered"
+								alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic6.jpg" class="img-responsive img-centered"
+								alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic10.jpg" class="img-responsive img-centered"
+								alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic11.jpg" class="img-responsive img-centered"
+								alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic13.jpg" class="img-responsive img-centered" alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<h3>Image-Title</h3>
+							<img src="images/pic14.jpg" class="img-responsive img-centered"
+								alt="">
+							<p>Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the industry's
+								standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type
+								specimen book.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="portfolio-modal modal fade slideanim" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-content port-modal">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<div class="modal-body">
+							<img src="images/pic1.jpg" class="img-responsive img-centered" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="#home" id="toTop" style="display: block;"> 
+	<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+	<!--start-smooth-scrolling-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/* 
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			}; 
+			*/
+			$().UItoTop({
+				easingType : 'easeOutQuart'
+			});
+		});
+	</script>
+	<!--end-smooth-scrolling-->
+	<!-- //for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<span id="musicControl">
+        <a id="mc_play" class="stop" onclick="play_music();">
+            <audio id="musicfx" loop="loop" autoplay="autoplay">
+                <source src="http://sc1.111ttt.com/2016/1/11/07/204072248346.mp3" type="audio/mpeg">
+            </audio>
+        </a>
+ </span>
+</body>
+</html>
+
