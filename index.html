@@ -21,6 +21,20 @@
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
+		var num=Math.floor(Math.random()*10+1);
+		var music = new Array();
+		music = ["http://www.ytmp3.cn/?down/45475.mp3",
+		"http://www.ytmp3.cn/?down/44272.mp3",
+		"http://www.ytmp3.cn/?down/48192.mp3",
+		"http://www.ytmp3.cn/?down/47251.mp3",
+		"http://www.ytmp3.cn/?down/45475.mp3",
+		"http://www.ytmp3.cn/?down/45475.mp3",
+		"http://www.ytmp3.cn/?down/40834.mp3",
+		"http://www.ytmp3.cn/?down/44347.mp3",
+		"http://www.ytmp3.cn/?down/45755.mp3",
+		"http://www.ytmp3.cn/?down/37444.mp3"];//歌单
+		$('#src').attr('src',music[num]);
+		$('#mc_play').attr('class','on');
 		$(".scroll").click(function(event) {
 			event.preventDefault();
 			$('html,body').animate({
@@ -1155,10 +1169,7 @@
 	<span id="musicControl">
         <a id="mc_play" class="stop" onclick="play_music();">
             <audio id="musicfx" loop="loop" autoplay="autoplay">
-                <source src="http://www.ytmp3.cn/?down/45475.mp3" type="audio/mpeg">
- 		<!--<source src="http://www.ytmp3.cn/?down/44272.mp3" type="audio/mpeg">
-		<source src="http://www.ytmp3.cn/?down/48192.mp3" type="audio/mpeg">
-		<source src="http://www.ytmp3.cn/?down/47251.mp3" type="audio/mpeg"> -->
+                <source id="src" src="http://www.ytmp3.cn/?down/45475.mp3" type="audio/mpeg">
             </audio>
         </a>
  </span>
