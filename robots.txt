@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /*admi*
+Disallow: /*dat*
+Disallow: /*inclu*
+Disallow: /*instal*
+Disallow: /*logrepor*
+Disallow: /plus
+Disallow: /style
+Disallow: /*templet*
+Allow: /.well-known
