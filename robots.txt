@@ -8,4 +8,4 @@ Disallow: /plus
 Disallow: /style
 Disallow: /*templet*
 Allow: /.well-known
-Disallow: /robots.txt
+Allow: /.well-known/assetlinks.json
